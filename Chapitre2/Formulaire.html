@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Formulaire -->
+    <label for="">Age</label>
+    <input type="text" name="" id="age" aria-placeholder="Donner votre âge">
+    <button onclick="verifierAge()">Vérifier</button>
+
+    <!-- Zone d'affichage du résultat -->
+    <p id="resultat"></p>
+    <script>
+    function verifierAge() {
+        let age = document.getElementById("age").value;
+        let resultat = document.getElementById("resultat");
+
+        if (age >= 18) {
+            resultat.textContent = "Vous êtes majeur.";
+        } else {
+            resultat.textContent = "Vous êtes mineur.";
+        }
+    }
+</script>
+</body>
+</html>

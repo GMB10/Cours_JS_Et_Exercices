@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>
+        Exercice2 
+    Faire un programme JS qui permet de tester si un nombre est premier
+    NB: un nombre est premier s’il  n’a que deux diviseurs
+    </h1>
+
+
+            <center>
+                    <b>
+                        <p>Formulaire</p>
+                    </b> 
+            </center>
+                
+                
+                
+            <b>
+                    <label for="">Nombre</label>
+                    <input type="text" id="Nombre" aria-placeholder="Entrez le premier nombre">
+            </b> 
+                    
+                <br> <br>
+                
+            
+            <br> <br>
+
+                
+            <button onclick="Verification()">Recherche</button>
+
+                <p id="Recherche"></p>
+                <script>
+                    function Verification() 
+                    {
+                        let x = 0
+                        let estpremier = true
+                        let Nombre = Number(document.getElementById ("Nombre").value);
+                        let Recherche = document.getElementById("Recherche");
+
+                    for ( let i=1 ; i<=Nombre; i++) 
+                    {
+                    if ( Nombre % i == 0){
+                        x = x+1
+
+                    }
+
+                    }
+                    if ( x == 2) {
+                        Recherche.textContent= "Il est premier"
+
+                    }
+                    else {
+                        Recherche.textContent= "Il n'est premier"
+                    }
+
+                    }
+                </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>
+    Exercice
+    Ecrire un programme Js qui permet la comparaison de deux nombre saisis au clavier
+   </h1>
+   
+   <center>
+        <b>
+            <p>Formulaire</p>
+        </b> 
+   </center>
+    
+    
+    
+   <b>
+        <label for="">Nombre1</label>
+        <input type="text" id="Nombre1" aria-placeholder="Entrez le premier nombre">
+   </b> 
+        
+    <br> <br>
+
+    <b>
+        <label for="">Nombre2</label>
+        <input type="text" id="Nombre2" aria-placeholder="Entrez le deuxieme nombre">
+    </b>
+    
+   
+   <br> <br>
+
+    
+   <button onclick="comparaison_des_nombres()">Comparer</button>
+
+    <p id="comparaison"></p>
+    <script>
+        function comparaison_des_nombres() {
+            let Nombre1 = Number(document.getElementById ("Nombre1").value);
+            let Nombre2 = Number(document.getElementById ("Nombre2").value);
+            let comparaison = document.getElementById("comparaison");
+
+            if ( Nombre1 > Nombre2 ){
+                comparaison.textContent = "Le premier nombre est supérieur au deuxième nombre"
+            }
+            else if ( Nombre1 === Nombre2 ){
+                comparaison.textContent = "Il y a egalité entre les deux nombres"
+            }
+            else {
+                comparaison.textContent = "Le deuxieme nombre est superieur au premier nombre"
+            }
+
+        }
+    </script>
+
+
+</body>
+</html>

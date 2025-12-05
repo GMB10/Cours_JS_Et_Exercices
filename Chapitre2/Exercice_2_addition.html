@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+   <form action=" ">
+            <center>
+                    <b>
+                        <p>Formulaire</p>
+                    </b> 
+            </center>
+                
+                
+                
+            <b>
+                    <label for="">Nombre1</label>
+                    <input type="text" id="Nombre1" aria-placeholder="Entrez le premier nombre">
+            </b> 
+                    
+                <br> <br>
+
+                <b>
+                    <label for="">Nombre2</label>
+                    <input type="text" id="Nombre2" aria-placeholder="Entrez le deuxieme nombre">
+                </b>
+                
+            
+            <br> <br>
+
+                
+            <button onclick="Adition_des_Nombres()">Calcul</button>
+
+                <p id="Calcul"></p>
+                <script>
+                    function Adition_des_Nombres() 
+                    {
+                        let Nombre1 = Number(document.getElementById ("Nombre1").value);
+                        let Nombre2 = Number(document.getElementById ("Nombre2").value);
+                        let Calcul = document.getElementById("Calcul");
+
+                        let resultat = Nombre1 + Nombre2
+                        Calcul.textContent = resultat
+
+                    }
+                </script>
+    </form>
+
+</body>
+</html>
