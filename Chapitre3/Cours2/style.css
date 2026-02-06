@@ -1,0 +1,18 @@
+.important{
+color:rgb(153, 26, 160);
+font-size: 50px;}
+.button{
+background-color: blue;}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  color: pink;   
+}
+
+#myForm {
+  border: 30px solid rgb(88, 144, 87);
+  padding: 100px;
+}

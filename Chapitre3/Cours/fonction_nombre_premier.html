@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Exercice2 
+    Faire un programme JS qui permet de tester si un nombre est premier avec while
+    NB: un nombre est premier s’il  n’a que deux diviseurs
+    </h1>
+    <b>
+        <label for="Nombre_recu">Nombre</label>
+        <input type="text" id="Nombre_recu">
+    </b>
+
+    <br> <br>
+
+    <button onclick="Verification()" id="Verification"> Verifier</button>
+    <p id="Verifier"></p>
+        <script>
+            function estpremier(nombre,div = 2){
+                if (nombre >= div){
+                    if(nombre % div == 0){
+                        return false;
+                    }
+                    return estpremier(nombre,div+1);
+                }
+                return true;
+            }
+
+        </script>
+
+</body>

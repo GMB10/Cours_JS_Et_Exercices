@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="myForm" method="POST">
+    
+        <p>Email</p>
+        <input type="email" id="email" placeholder="Entrez le mail">
+
+        <p>Téléphone</p>
+        <input type="tel" id="tel" placeholder="Entrez le téléphone" 
+        required>
+
+        <p>Mot de passe</p>
+        <input type="password" id="mdp" placeholder="Entrez le mot de passe" required>
+
+        <br><br>
+        <button type="submit">Valider</button>
+    </form>
+
+   <script>
+    let form = document.getElementById("myForm")
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+
+        let tel = document.getElementById("tel").value;
+        let Email = document.getElementById("email").value;
+        let mdp = document.getElementById("mdp").value;
+        let reg = /^(7)\d{8}$/;
+            if (!reg.test(tel)){
+                alert('Le numero de telephone doit commencer par 77 ou un 78')
+                return;
+            }
+            
+         if (mdp.length < 8){
+                alert('Le mot de passe au moins 8 chiffres')
+                return;
+            }
+
+            if (tel.length !== 9){
+                alert('Le numero de telephone doit être egale a 9 chiffres')
+                return;
+            }
+
+            alert("Formulaire soumis")
+    });
+</script>
+</body>
+</html>

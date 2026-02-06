@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function estpalindrome(entrer){
+
+        let estpalindrome = true;
+        n = entrer.length;
+
+        for(let i=0; i < n/2; i++)
+            {
+                if ( entrer[i] != entrer[n - i - 1]) 
+                {
+                    estpalindrome=false;
+                    break;
+                } 
+            }
+
+        if(estpalindrome)
+            {
+            alert("Le mot est un palindrome");
+            }
+            else
+                {
+                    alert("Le mot n'est pas un palindrome");
+                }
+                }
+       let entrer=prompt("Entrez le mot ou la phrase");
+       alert(estpalindrome(entrer));
+            
+        </script>
+</body>
+</html>
